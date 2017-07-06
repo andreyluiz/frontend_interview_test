@@ -9,7 +9,7 @@ type Props = {
   space: number,
 };
 
-export default ({
+const Info = ({
   title,
   price,
   numberOfRooms,
@@ -35,3 +35,12 @@ export default ({
     </div>
   </div>
 );
+
+Info.defaultProps = {
+  title: 'Advertisement title',
+  price: 0,
+  numberOfRooms: 0,
+  space: 0,
+};
+
+export default Info;
