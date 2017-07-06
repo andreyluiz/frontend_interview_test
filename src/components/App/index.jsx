@@ -1,13 +1,13 @@
 import React from 'react';
-import Card from '../Card';
+import Advertisement from '../Advertisement';
 import './styles.scss';
 
 export default () => (
   <div>
     <div styleName="row">
-      <Card />
-      <Card />
-      <Card />
+      <Advertisement />
+      <Advertisement />
+      <Advertisement />
     </div>
   </div>
 );
