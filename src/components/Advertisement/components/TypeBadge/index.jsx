@@ -3,13 +3,13 @@ import React from 'react';
 import './styles.scss';
 
 type Props = {
-  sell: boolean,
+  purpose: number,
 };
 
 export default ({
-  sell,
+  purpose,
 }: Props) => (
   <div styleName="type">
-    <span>{sell ? 'Kaufen' : 'Mieten'}</span>
+    <span>{(purpose === 1) ? 'Kaufen' : 'Mieten'}</span>
   </div>
 );

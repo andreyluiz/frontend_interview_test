@@ -4,17 +4,38 @@ import TypeBadge from './components/TypeBadge';
 import Info from './components/Info';
 import './styles.scss';
 
-export default () => (
+type Props = {
+  thumbnail: String,
+  purpose: number,
+  title: String,
+  price: number,
+  numberOfRooms: number,
+  space: number,
+};
+
+export default ({
+  thumbnail,
+  purpose,
+  title,
+  price,
+  numberOfRooms,
+  space,
+}: Props) => (
   <div styleName="card">
     <div styleName="image">
-      <TypeBadge />
+      <TypeBadge purpose={purpose} />
       <img
-        src="https://d3e02gns9oqhhr.cloudfront.net/assets/expose_v2/thumbnail.5908c4916a1ca6.30802316.jpg"
-        alt="Thumb"
+        src={thumbnail}
+        alt="Thumbnail"
         width="100%"
         height="auto"
       />
     </div>
-    <Info />
+    <Info
+      title={title}
+      price={price}
+      numberOfRooms={numberOfRooms}
+      space={space}
+    />
   </div>
 );

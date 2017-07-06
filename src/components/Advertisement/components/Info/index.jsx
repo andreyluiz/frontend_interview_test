@@ -1,22 +1,35 @@
+// @flow
 import React from 'react';
 import './styles.scss';
 
-export default () => (
+type Props = {
+  title: String,
+  price: number,
+  numberOfRooms: number,
+  space: number,
+};
+
+export default ({
+  title,
+  price,
+  numberOfRooms,
+  space,
+}: Props) => (
   <div styleName="info">
     <div styleName="body">
-      <h2>Casa Casa Casa Casa Casa Casa Casa Casa Casa Casa Casa Casa Casa Casa</h2>
+      <h2>{ title }</h2>
       <p>35764 Sinn / Fleisbach</p>
     </div>
     <div styleName="footer">
       <div styleName="price">
-        <h2>1.954 €</h2>
+        <h2>{ price } €</h2>
       </div>
       <div styleName="size">
         <div styleName="bedrooms">
-          <span>3 Zimmer</span>
+          <span>{ numberOfRooms } Zimmer</span>
         </div>
         <div styleName="metres">
-          <span>ab 35 m²</span>
+          <span>ab { space } m²</span>
         </div>
       </div>
     </div>
