@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
-import './index.css';
+import './index.scss';
 
 const element = document.getElementById('app');
 
-render(<h1>Hello</h1>, element);
+render(<h1 styleName="reddish">Hello</h1>, element);
