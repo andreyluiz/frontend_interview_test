@@ -1,0 +1,4 @@
+ -w
+ test/browser.js
+ --require ignore-styles
+ src/**/*.spec.js

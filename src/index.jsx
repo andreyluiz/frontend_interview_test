@@ -1,8 +1,8 @@
 // @flow
 import React from 'react';
 import { render } from 'react-dom';
-import './index.scss';
+import App from './components/App';
 
 const element = document.getElementById('app');
 
-render(<h1 styleName="reddish">Hello</h1>, element);
+render(<App />, element);
