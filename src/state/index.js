@@ -14,6 +14,9 @@ const ADS_REQUEST = duck.defineType('ADS_REQUEST');
 const ADS_SUCCESS = duck.defineType('ADS_SUCCESS');
 const ADS_ERROR = duck.defineType('ADS_ERROR');
 
+// For testing purposes.
+export const Types = { ADS_REQUEST, ADS_SUCCESS, ADS_ERROR };
+
 // The actions from the action types. They may or may not pass a payload attribute.
 const adsRequest = duck.createAction(ADS_REQUEST);
 const adsSuccess = duck.createAction(ADS_SUCCESS);
@@ -50,9 +53,13 @@ export const fetchAds = () =>
       });
   };
 
+// For testing purposes.
+export const Actions = { adsRequest, adsSuccess, adsError, fetchAds };
+
 const INITIAL_STATE = {
   isLoading: false,
   ads: [],
+  error: null,
 };
 
 // Redux Duck defines the reducer the Flux way. As an object.
@@ -66,8 +73,9 @@ export const reducer = duck.createReducer({
     isLoading: false,
     ads: payload,
   }),
-  [ADS_ERROR]: state => ({
+  [ADS_ERROR]: (state, { payload }) => ({
     ...state,
     isLoading: false,
+    error: payload,
   }),
 }, INITIAL_STATE);
