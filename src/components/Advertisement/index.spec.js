@@ -20,5 +20,5 @@ describe('<Advertisement />', () => {
   });
 
   // Since this component just pass down the other props to the child
-  // components, those props will not be tested here (see Info and TypeBadge).
+  // components, those props will not be tested here (see Info and Purpose).
 });

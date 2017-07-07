@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import TypeBadge from './components/TypeBadge';
+import Purpose from './components/Purpose';
 import Info from './components/Info';
 import './styles.scss';
 
@@ -23,7 +23,7 @@ export default ({
 }: Props) => (
   <div styleName="card">
     <div styleName="image">
-      <TypeBadge purpose={purpose} />
+      <Purpose purpose={purpose} />
       <img
         src={thumbnail}
         alt="Thumbnail"
