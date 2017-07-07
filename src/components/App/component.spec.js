@@ -2,7 +2,7 @@ import React from 'react';
 import chai, { expect } from 'chai';
 import { shallow } from 'enzyme';
 import chaiEnzyme from 'chai-enzyme';
-import App from '.';
+import App from './component';
 
 chai.use(chaiEnzyme());
 

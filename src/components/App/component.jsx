@@ -9,12 +9,14 @@ type Props = {
   ads: Array<Object>,
   isLoading: boolean,
   error: ?String,
+  fetchAds: Function,
 };
 
 export default class extends Component {
   static defaultProps = {
     ads: [],
     isLoading: false,
+    fetchAds: () => {},
   }
 
   componentWillMount() {
