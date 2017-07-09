@@ -1,6 +1,7 @@
 // @flow
 import { createDuck } from 'redux-duck';
 import axios from 'axios';
+import find from 'lodash/find';
 
 /**
  * I use redux-duck in all my React + Redux projects. This simple library
@@ -72,9 +73,9 @@ export const reducer = duck.createReducer({
     ...state,
     isLoading: false,
     ads: payload.data.slice(0, 10).map((ad) => {
-      const titleImage = Object.values(ad.advertisementAssets).find(a => a.titlePicture);
+      const titleImage = find(ad.advertisementAssets, { titlePicture: true });
       return {
-        id: ad._id.$id,
+        id: ad._id.$id, // eslint-disable-line no-underscore-dangle
         purpose: ad.purpose,
         title: ad.title,
         price: ad.advertisementPrice.baseRent,
