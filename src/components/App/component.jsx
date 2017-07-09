@@ -26,7 +26,7 @@ export default class extends Component {
   props: Props
 
   render() {
-    const { isLoading, error } = this.props;
+    const { ads, isLoading, error } = this.props;
     if (isLoading) {
       return <Loading />;
     }
@@ -36,9 +36,9 @@ export default class extends Component {
     return (
       <div>
         <div styleName="row">
-          <Advertisement />
-          <Advertisement />
-          <Advertisement />
+          {ads.map(ad => (
+            <Advertisement {...ad} />
+          ))}
         </div>
       </div>
     );

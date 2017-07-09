@@ -28,4 +28,12 @@ module.exports = {
       template: 'index.html',
     }),
   ],
+  devServer: {
+    proxy: {
+      '/v1': {
+        target: 'https://api.mcmakler.de',
+        secure: false,
+      },
+    },
+  },
 };

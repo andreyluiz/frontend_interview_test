@@ -3,12 +3,18 @@ import React from 'react';
 import './styles.scss';
 
 type Props = {
+  /**
+   * The ad title.
+   */
   title: String,
   price: number,
   numberOfRooms: number,
   space: number,
 };
 
+/**
+ * This component renders the informations about the advertisement.
+ */
 const Info = ({
   title,
   price,
@@ -29,7 +35,7 @@ const Info = ({
           <span>{ numberOfRooms } Zimmer</span>
         </div>
         <div styleName="metres">
-          <span>ab { space } m²</span>
+          <span>ab { parseInt(space, 10) } m²</span>
         </div>
       </div>
     </div>

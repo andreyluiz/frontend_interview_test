@@ -42,7 +42,7 @@ export const fetchAds = () =>
   (dispatch: Function) => {
     // Request set isLoading flag to true
     dispatch(adsRequest());
-    return axios.get('https://api.mcmakler.de/v1/advertisements')
+    return axios.get('/v1/advertisements')
       .then(({ data }) => {
         // Success set isLoading back to false and receives the data.
         dispatch(adsSuccess(data));
@@ -71,7 +71,17 @@ export const reducer = duck.createReducer({
   [ADS_SUCCESS]: (state, { payload }) => ({
     ...state,
     isLoading: false,
-    ads: payload,
+    ads: payload.data.slice(0, 10).map((ad) => {
+      const titleImage = Object.values(ad.advertisementAssets).find(a => a.titlePicture);
+      return {
+        purpose: ad.purpose,
+        title: ad.title,
+        price: ad.advertisementPrice.baseRent,
+        numberOfRooms: ad.realestateSummary.numberOfRooms,
+        space: ad.realestateSummary.space,
+        thumbnail: titleImage ? titleImage.advertisementThumbnails.inventory_m.url : null,
+      };
+    }),
   }),
   [ADS_ERROR]: (state, { payload }) => ({
     ...state,
