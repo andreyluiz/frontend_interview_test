@@ -55,6 +55,7 @@
     "lodash": "^4.17.4",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-flexbox-grid": "^1.1.3",
     "react-redux": "^5.0.5",
     "redux": "^3.7.1",
     "redux-duck": "^1.0.2",

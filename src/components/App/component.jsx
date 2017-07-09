@@ -1,5 +1,6 @@
 // @flow
 import React, { Component } from 'react';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 import Advertisement from '../Advertisement';
 import Loading from '../Loading';
 import ErrorMessage from '../ErrorMessage';
@@ -34,13 +35,18 @@ export default class extends Component {
       return <ErrorMessage>{ error }</ErrorMessage>;
     }
     return (
-      <div>
-        <div styleName="row">
-          {ads.map(ad => (
-            <Advertisement {...ad} />
-          ))}
-        </div>
-      </div>
+      <Grid fluid>
+        {ads.map((row, index) => (
+          <Row key={index}>
+            {row.map(ad => (
+              <Col key={ad.id} md={4}>
+                <Advertisement {...ad} />
+              </Col>
+            ))}
+          </Row>
+        ))}
+
+      </Grid>
     );
   }
 }

@@ -74,6 +74,7 @@ export const reducer = duck.createReducer({
     ads: payload.data.slice(0, 10).map((ad) => {
       const titleImage = Object.values(ad.advertisementAssets).find(a => a.titlePicture);
       return {
+        id: ad._id.$id,
         purpose: ad.purpose,
         title: ad.title,
         price: ad.advertisementPrice.baseRent,
