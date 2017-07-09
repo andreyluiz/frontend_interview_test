@@ -2,10 +2,8 @@
 import React from 'react';
 import './styles.scss';
 
+// For docs about these props, see Advertisement/index.jsx
 type Props = {
-  /**
-   * The ad title.
-   */
   title: String,
   price: number,
   numberOfRooms: number,

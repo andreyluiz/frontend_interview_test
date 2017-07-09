@@ -5,7 +5,6 @@ import { fetchAds } from '../../state';
 import { selectIsLoading, selectAds, selectError } from '../../state/selectors';
 import App from './component';
 
-// TODO Use reselect.
 const mapStateToProps = createStructuredSelector({
   ads: selectAds,
   isLoading: selectIsLoading,

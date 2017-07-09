@@ -5,14 +5,35 @@ import Info from './components/Info';
 import './styles.scss';
 
 type Props = {
+  /**
+   * The ad image source.
+   */
   thumbnail: String,
+  /**
+   * 0 or 1 for Rent or Sell.
+   */
   purpose: number,
+  /**
+   * The title of the Advertisement.
+   */
   title: String,
+  /**
+   * The price of the advertisement.
+   */
   price: number,
+  /**
+   * How many rooms has in the house.
+   */
   numberOfRooms: number,
+  /**
+   * How much space the house have.
+   */
   space: number,
 };
 
+/**
+ * Stateless component that renders the Advertisement itself.
+ */
 export default ({
   thumbnail,
   purpose,

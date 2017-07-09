@@ -3,9 +3,15 @@ import React from 'react';
 import './styles.scss';
 
 type Props = {
+  /**
+   * A text representing an error comming from the API.
+   */
   children: ?String,
 }
 
+/**
+ * Simple component to show an error when the API fails to respond.
+ */
 const ErrorMessage = ({
   children,
 }: Props) => (
