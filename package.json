@@ -8,6 +8,7 @@
   "license": "MIT",
   "scripts": {
     "serve": "webpack-dev-server",
+    "build": "webpack",
     "flow": "flow",
     "lint": "eslint src",
     "test": "cross-env NODE_ENV=test mocha"
