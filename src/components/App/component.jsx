@@ -4,7 +4,6 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 import Advertisement from '../Advertisement';
 import Loading from '../Loading';
 import ErrorMessage from '../ErrorMessage';
-import './styles.scss';
 
 type Props = {
   /**
