@@ -23,7 +23,9 @@ const Info = ({
 }: Props) => (
   <div styleName="info">
     <div styleName="body">
-      <h2>{ title }</h2>
+      <div styleName="title">
+        <h2 title={title}>{ title }</h2>
+      </div>
       <p>35764 Sinn / Fleisbach</p>
     </div>
     <div styleName="footer">
