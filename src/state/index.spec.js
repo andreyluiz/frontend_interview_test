@@ -22,7 +22,7 @@ describe('Default state', () => {
   });
 
   it('test fetchAds async action should call ADS_SUCCESS action', () => {
-    mock.onGet('https://api.mcmakler.de/v1/advertisements').reply(200, []);
+    mock.onGet('/v1/advertisements').reply(200, []);
 
     const expectedActions = [
       { type: Types.ADS_REQUEST },
@@ -37,7 +37,7 @@ describe('Default state', () => {
 
   it('test fetchAds async action should call ADS_ERROR action', () => {
     mock
-      .onGet('https://api.mcmakler.de/v1/advertisements')
+      .onGet('/v1/advertisements')
       .reply(500);
 
     const expectedActions = [

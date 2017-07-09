@@ -6,10 +6,16 @@ type Props = {
   children: ?String,
 }
 
-export default ({
+const ErrorMessage = ({
   children,
 }: Props) => (
   <div styleName="error">
     <span>{ children }</span>
   </div>
 );
+
+ErrorMessage.defaultProps = {
+  children: 'Unknown Error',
+};
+
+export default ErrorMessage;
