@@ -1,5 +1,4 @@
-# Front-End Interview Test [![Build Status](https://travis-ci.org/andreyluiz/frontend_interview_test.svg?branch=master)](https://travis-ci.org/andreyluiz/frontend_interview_test)
-
+# Front-End Interview Test
 This is a simple front-end code challenge created to serve two purposes:
 
 1. Show off your skills,
@@ -46,21 +45,21 @@ The programming challenge exists in 2 parts:
 
 I created a simple application with React and Redux.
 
-For React, the only lib I used was react-flexbox-grid to prevent me from using additional CSS for the flexbox layout.
+For React, the only lib I used was [react-flexbox-grid](https://github.com/roylee0704/react-flexbox-grid) to prevent me from using additional CSS for the flexbox layout.
 
 For Redux I used the following:
 
- - axios: To perform promise based http requests;
- - lodash: To facilitate array processing operations;
- - react-redux: To connect with React;
- - redux: The core library;
- - redux-duck: For nice state declaration standard (see src/state/index.js);
- - redux-thunk: To create async actions;
- - reselect: To create state selectors.
+ - [axios](https://github.com/mzabriskie/axios): To perform promise based http requests;
+ - [lodash](https://github.com/lodash/lodash): To facilitate array processing operations;
+ - [react-redux](https://github.com/reactjs/react-redux): To connect with React;
+ - [redux](https://github.com/reactjs/redux): The core library;
+ - [redux-duck](https://github.com/PlatziDev/redux-duck): For nice state declaration standard (see src/state/index.js);
+ - [redux-thunk](https://github.com/gaearon/redux-thunk): To create async actions;
+ - [reselect](https://github.com/reactjs/reselect): To create state selectors.
 
-I used SASS with CSS Modules. This decision was based in my current experience with React. React is bad at scoping CSS, so CSS Modules solve this problem (I could use Styled Components too). I choose SASS because it offers a nice composition and syntax tooling.
+I used SASS with CSS Modules. This decision was based in my current experience with React. React is bad at scoping CSS, so CSS Modules solve this problem (I could use [styled-components](https://github.com/styled-components/styled-components) too). I choose SASS because it offers a nice composition and syntax tooling.
 
-The application structure is something I developed by test and errors, during my experience with React. It's a structure that scales very well. I have an application with 1000+ Components (not counting the containers and state declarations) in this structure and it is maintainable and testable. Sadly it is a private project and it is in a private Gitlab repo.
+The application structure is something I developed by test and errors, during my experience with React and inspired on [this](https://medium.com/@alexmngn/how-to-better-organize-your-react-applications-2fd3ea1920f1) and [this](https://medium.com/@alexmngn/how-to-use-redux-on-highly-scalable-javascript-applications-4e4b8cb5ef38) Medium posts. It's a structure that scales very well. I have an application with 1000+ Components (not counting the containers and state declarations) in this structure and it is maintainable and testable. Sadly it is a private project and it is in a private Gitlab repo.
 
 I'm improving this structure to use Styled Components and get rid of CSS/SASS. But it is a WIP for my next projects.
 
@@ -83,4 +82,4 @@ Done with Redux and state processing.
 * Pixel perfection: check;
 * Componential thinking: check;
 * Usage of linters: `yarn lint` and `yarn flow`;
-* Git hooks: 
+* Git hooks: Not using.
